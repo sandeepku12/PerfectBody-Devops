@@ -1,6 +1,5 @@
 # Xamarin.Android
 - task: XamarinAndroid@1
-- task: XamarinAndroid@1
   inputs:
     projectFile: '**/*.csproj'
     target: 'PerfectBody.Android.csproj'
@@ -20,7 +19,13 @@ pool:
 
 variables:
   buildConfiguration: 'Release'
-  outputDirectory: '$(build.binariesDirectory)/$(buildConfiguration)'
+  outputDirectory: '$(build.binariesDirectory)/- task: XamarinAndroid@1
+  inputs:
+    projectFile: '**/*.csproj'
+    target: 'PerfectBody.Android.csproj'
+    outputDirectory: '$(build.binariesDirectory)/$(buildConfiguration)'
+    configuration: '$(buildConfiguration)'
+    jdkOption: 'JDKVersion''
 
 steps:
 - task: NuGetToolInstaller@1
