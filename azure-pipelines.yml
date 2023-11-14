@@ -1,5 +1,10 @@
 # Xamarin.Android
 - task: XamarinAndroid@1
+- task: XamarinAndroid@1
+  inputs:
+    projectFile: '**/*.csproj'
+    target: 'PerfectBody.Android.csproj'
+    jdkOption: 'JDKVersion'
   inputs:
     projectFile: '**/*.csproj'
     jdkOption: 'JDKVersion'
